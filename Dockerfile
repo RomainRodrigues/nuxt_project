@@ -1,14 +1,11 @@
 FROM node:18-alpine
 
-WORKDIR /app
+WORKDIR /app/front
 
-RUN apk update && apk upgrade
-RUN apk add git
+COPY ./front/package*.json .
 
-COPY ./front/package*.json /app/
+RUN npm i && npm cache clean --force
 
-RUN npm install && npm cache clean --force
-
-COPY . .
+COPY . ..
 
 ENV PATH ./node_modules/.bin/:$PATH

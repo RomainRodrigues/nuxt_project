@@ -8,8 +8,8 @@ services:
     container_name: nuxt_dev
     command: npm run dev
     volumes:
-    - ./front:/app
+    - .:/app
     # http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html
-    - /app/node_modules
+    - /app/front/node_modules
     ports:
       - "3000:3000"

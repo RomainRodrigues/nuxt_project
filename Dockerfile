@@ -15,4 +15,4 @@ ENTRYPOINT [ "" ]
 USER www-data
 
 CMD echo "0" && id &&\
-    if [ -d /app/front/ ]; then cd /app/front; npm install; npm run dev; fi
+    echo "Front" && if [ -d /app/front/ ]; then cd /app/front; npm install; npm run dev; fi

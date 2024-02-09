@@ -1,11 +1,18 @@
-FROM node:18-alpine
+FROM node:20-alpine
+ARG USER_ID
+ARG GROUP_ID
 
-WORKDIR /app/front
+RUN apk update && apk upgrade
+RUN apk add shadow
+RUN apk add bash
 
-COPY ./front/package*.json .
+RUN deluser node ; \ 
+    addgroup -g ${GROUP_ID} -S www-data ; \
+    groupmod -g ${GROUP_ID} www-data ; \
+    adduser -u ${USER_ID} -D -S -G www-data www-data && exit 0 ; exit 1
 
-RUN npm i && npm cache clean --force
+ENTRYPOINT [ "" ]
+USER www-data
 
-COPY . ..
-
-ENV PATH ./front/node_modules/.bin/:$PATH
+CMD echo "0" && id &&\
+    echo "Front" && if [ -d /app/front/ ]; then cd /app/front; npm install; npm run dev; fi

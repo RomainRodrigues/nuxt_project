@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --port 80",
+    "postinstall": "nuxt prepare",
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },

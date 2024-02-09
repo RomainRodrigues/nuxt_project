@@ -8,4 +8,4 @@ RUN npm i && npm cache clean --force
 
 COPY . ..
 
-ENV PATH ./node_modules/.bin/:$PATH
+ENV PATH ./front/node_modules/.bin/:$PATH

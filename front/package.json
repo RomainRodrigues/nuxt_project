@@ -2,15 +2,18 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --port 80",
+    "dev": "rm -rf /tmp/nitro/worker-* && nuxt dev --port 80",
     "postinstall": "nuxt prepare",
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.17",
-    "nuxt": "^3.7.6",
+    "nuxt": "^3.10.2",
     "postcss": "^8.4.33",
-    "tailwindcss": "^3.4.1"
+    "postcss-html": "^1.6.0",
+    "tailwindcss": "^3.4.1",
+    "vue": "^3.4.19",
+    "vue-router": "^4.2.5"
   }
 }

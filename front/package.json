@@ -1,19 +1,51 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "rm -rf /tmp/nitro/worker-* && nuxt dev --port 80",
-    "postinstall": "nuxt prepare",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.17",
-    "nuxt": "^3.10.2",
-    "postcss": "^8.4.33",
-    "postcss-html": "^1.6.0",
-    "tailwindcss": "^3.4.1",
-    "vue": "^3.4.19",
-    "vue-router": "^4.2.5"
-  }
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "rm -rf /tmp/nitro/worker-* && nuxt dev --port 80",
+        "postinstall": "nuxt prepare",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "lint": "eslint --ext .js,.vue,.ts,.json .",
+        "lint:style": "stylelint '*/*.{vue,css,scss}'"
+    },
+    "devDependencies": {
+        "@nuxtjs/eslint-config-typescript": "^12.1.0",
+        "@typescript-eslint/eslint-plugin": "^6.7.5",
+        "@typescript-eslint/parser": "^6.7.5",
+        "@vue/eslint-config-typescript": "^12.0.0",
+        "autoprefixer": "^10.4.17",
+        "eslint": ">= 8",
+        "eslint-plugin-vue": ">= 9",
+        "nuxt": "^3.10.2",
+        "postcss": "^8.4.33",
+        "postcss-html": "^1.6.0",
+        "stylelint": "^16.2.1",
+        "stylelint-config-recommended-vue": "^1.5.0",
+        "stylelint-config-standard": "^36.0.0",
+        "tailwindcss": "^3.4.1",
+        "vue": "^3.4.19",
+        "vue-eslint-parser": "^9.4.2",
+        "vue-router": "^4.2.5"
+    },
+    "stylelint": {
+        "extends": [
+            "stylelint-config-standard",
+            "stylelint-config-recommended-vue"
+        ],
+        "rules": {
+            "at-rule-no-unknown": [
+                true,
+                {
+                    "ignoreAtRules": [
+                        "tailwind",
+                        "apply",
+                        "variants",
+                        "responsive",
+                        "screen"
+                    ]
+                }
+            ]
+        }
+    }
 }

@@ -1,0 +1,12 @@
+#Common
+node_modules
+dist
+.nuxt
+coverage
+lib/templates
+
+tsconfig.json
+tailwind.config.js
+package*.json
+*.css
+*.scss

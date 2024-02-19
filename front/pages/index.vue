@@ -1,9 +1,9 @@
 <script setup>
-//tmp file
+// tmp file
 </script>
 
 <template>
   <div>
-    <NuxtWelcome />
+    <p>Contenue de l'application</p>
   </div>
 </template>

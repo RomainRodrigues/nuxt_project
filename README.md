@@ -1,7 +1,25 @@
 # Nuxt project
 Application Vue.js avec le framework nuxt
 
-Pour lancer le projet
+## Le projet fonctionne avec la V2 de docker compose
+
+Télécharger docker compose V2
+```
+sudo apt remove docker-compose
+```
+
+```
+sudo apt-get update
+sudo apt-get install docker-compose-plugin
+```
+
+Vérifier la version
+```
+docker compose version
+```
+
+## Pour lancer le projet
+
 ```
 ./docker_start.sh
 ```
@@ -20,7 +38,7 @@ Celle-ci à confirmer:
 - Name: Prettier ESLint
   Link: https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint
 
-Ajouter ceci dans le User -> settings.json :
+Ajouter ceci pour l'auto formatage des fichiers (qui fonctionne avec ESLint) dans le User -> settings.json :
 ```
 "eslint.validate": [
     "javascript",

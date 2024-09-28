@@ -4,6 +4,6 @@
 
 <template>
   <div>
-    <p>Contenue de l'application</p>
+    Application content
   </div>
 </template>

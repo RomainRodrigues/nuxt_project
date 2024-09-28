@@ -4,7 +4,7 @@
 docker compose down
 
 # Supprimer les images
-docker rmi nuxt_dev postgres:latest dpage/pgadmin4
+docker rmi nuxt_dev
 
 # Supprimer les volumes
 docker volume rm $(docker volume ls -q)

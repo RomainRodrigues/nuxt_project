@@ -1,6 +1,6 @@
 # Nuxt Project (French version bellow)
 
-Vue.js application with the Nuxt framework and Tailwind for CSS. Integration of PostgreSQL and pgAdmin for database management (useful for local development without an external database).
+Vue.js application with the Nuxt framework and Tailwind for CSS.
 
 ## Prerequisites
 
@@ -67,24 +67,6 @@ Add the following configuration for file auto-formatting (works with ESLint) in 
 }
 ```
 
-## Database Configuration
-
-The project uses PostgreSQL as the database. The connection information is stored in a [`.env`](.env) file.
-
-To access the database, you can use the pgAdmin admin interface.
-
-### Environment Variables
-
-Create a [`.env`](.env) file at the root of your project and add the following variables:
-
-```plaintext
-POSTGRES_USER=admin
-POSTGRES_PASSWORD=admin
-POSTGRES_DB=database
-PGADMIN_DEFAULT_EMAIL=admin@example.com
-PGADMIN_DEFAULT_PASSWORD=admin
-```
-
 ## Running the Application
 
 ### Docker Services
@@ -92,8 +74,6 @@ PGADMIN_DEFAULT_PASSWORD=admin
 The [`docker-compose.yaml`](docker-compose.yaml) file configures the following services:
 
 - **nuxt**: Service for the Nuxt (Vue.js) application.
-- **db**: Service for the PostgreSQL database.
-- **pgadmin**: Service for the PostgreSQL admin interface (pgAdmin).
 
 ### Starting the Services
 
@@ -106,8 +86,6 @@ To start the Docker services, run the following script:
 This will start the services in the background.
 
 The Nuxt (Vue.js) application will be accessible at [`http://localhost:8080`](http://localhost:8080).
-
-You can access pgAdmin at [`http://localhost:5050`](http://localhost:5050) using the credentials defined in the [`.env`](.env) file.
 
 ### Stopping the Services
 
@@ -122,7 +100,7 @@ This will stop the services and remove all associated Docker containers.
 
 # Nuxt Project
 
-Application Vue.js avec le framework Nuxt et Tailwind pour le css . Intégration de PostgreSQL et pgAdmin pour la gestion de la base de données (utile pour le développement en local sans base de données externe).
+Application Vue.js avec le framework Nuxt et Tailwind pour le css.
 
 ## Prérequis
 
@@ -189,24 +167,6 @@ Ajoutez la configuration suivante pour l'auto-formatage des fichiers (fonctionne
 }
 ```
 
-## Configuration de la base de données
-
-Le projet utilise PostgreSQL comme base de données. Les informations de connexion sont stockées dans un fichier [`.env`](.env).
-
-Pour accéder à la base de données, vous pouvez utiliser l'interface d'administration pgAdmin.
-
-### Variables d'environnement
-
-Créez un fichier [`.env`](.env) à la racine de votre projet et ajoutez-y les variables suivantes :
-
-```plaintext
-POSTGRES_USER=admin
-POSTGRES_PASSWORD=admin
-POSTGRES_DB=database
-PGADMIN_DEFAULT_EMAIL=admin@example.com
-PGADMIN_DEFAULT_PASSWORD=admin
-```
-
 ## Lancer l'application
 
 ### Services Docker
@@ -214,8 +174,6 @@ PGADMIN_DEFAULT_PASSWORD=admin
 Le fichier [`docker-compose.yaml`](docker-compose.yaml) configure les services suivants :
 
 - **nuxt** : Service pour l'application Nuxt (Vue.js).
-- **db** : Service pour la base de données PostgreSQL.
-- **pgadmin** : Service pour l'interface d'administration de PostgreSQL (pgAdmin).
 
 ### Lancer les services
 
@@ -228,8 +186,6 @@ Pour lancer les services Docker, lancer le script suivant :
 Cela démarre les services en arrière-plan. 
 
 L'application Nuxt (Vue.js) est accessible via [`http://localhost:8080`](http://localhost:8080).
-
-Vous pouvez accéder à pgAdmin via [`http://localhost:5050`](http://localhost:5050) avec les identifiants définis dans le fichier [`.env`](.env).
 
 
 ### Arrêter les services

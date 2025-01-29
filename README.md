@@ -40,18 +40,13 @@ For proper configuration of ESLint and Stylelint (which are necessary for integr
 
 ### Auto-formatting Configuration in VSCode
 
+This project use last version of Eslint, so the flat config is necessary. See the [documentation](https://eslint.org/docs/user-guide/configuring/configuration-files#using-a-configuration-file) for more information.
+
 Add the following configuration for file auto-formatting (works with ESLint) in your user `settings.json`:
 
 ```json
+"eslint.useFlatConfig": true,
 "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "html"
-],
-"stylelint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
@@ -130,28 +125,16 @@ Pour une bonne configuration de ESLint et Stylelint (qui sont nécessaire pour l
 
 - **ESLint**
   - [Lien vers le marketplace](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- **Stylelint**
-  - [Lien vers le marketplace](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
-
-### Extension optionnelle
-
-- **Prettier ESLint** (à confirmer peut-être pas inutile)
-  - [Lien vers le marketplace](https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint)
 
 ### Configuration de l'auto-formatage dans VSCode
+
+Ce projet utilise la dernière version de Eslint, donc la 'flat config' est nécessaire. Voir la [documentation](https://eslint.org/docs/user-guide/configuring/configuration-files#using-a-configuration-file) pour plus d'informations.
 
 Ajoutez la configuration suivante pour l'auto-formatage des fichiers (fonctionne avec ESLint) dans votre `settings.json` utilisateur :
 
 ```json
+"eslint.useFlatConfig": true,
 "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "html"
-],
-"stylelint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",

@@ -1,12 +1,23 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-    ssr: false,
-    devtools: true,
-    css: ['~/assets/css/main.css'],
-    postcss: {
-        plugins: {
-            tailwindcss: {},
-            autoprefixer: {},
-        },
+  modules: [
+    '@nuxt/eslint',
+  ],
+  ssr: false,
+  devtools: {
+    enabled: true,
+  },
+  css: ['~/assets/css/main.css'],
+  compatibilityDate: '2023-10-01',
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
+  },
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
 })

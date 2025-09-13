@@ -179,4 +179,4 @@ Pour arrêter les services Docker, lancer le script suivant :
 ./docker_clean.sh
 ```
 
-Cela arrête les services et supprime tous les contenues docker associés.
+Cela arrête les services et supprime tous les contenues docker associés :-).

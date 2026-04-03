@@ -1,4 +1,4 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     enabled: true,
   },
   css: ['~/assets/css/main.css'],
-  compatibilityDate: '2023-10-01',
+  compatibilityDate: '2025-01-01',
   postcss: {
     plugins: {
       tailwindcss: {},
